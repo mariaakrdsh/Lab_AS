@@ -1,24 +1,24 @@
 import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("1. факторизація ро-Полларда \n" +
-                    "2. Великий крок - малий крок \n" +
+                    "2. великий крок - малий крок \n" +
                     "3. функція Ейлера \n" +
                     "4. функція Мьобіуса \n" +
                     "5. символ Лежандра \n" +
                     "6. символ Якобі \n" +
                     "7. алгоритм Чіполли \n" +
-                    "8. алгоритм Міллера-Рабіна");
+                    "8. алгоритм Соловея-Штрассена");
             System.out.println("Виберіть алгоритм:");
             int a = scanner.nextInt();
             switch (a) {
-                case 1:
+                case 1: {
                     Algorithms.pollard();
                     break;
+                }
                 case 2:
                     Algorithms.bigStepSmallStep();
                     break;
@@ -32,13 +32,13 @@ public class Main {
                     Algorithms.legendreInterface();
                     break;
                 case 6:
-                    Algorithms.jacobiSymbol();
+                    Algorithms.jacobiInterface();
                     break;
                 case 7:
                     Algorithms.chipollaAlgorithm();
                     break;
                 case 8:
-                    Algorithms.millerRabinAlgorithm();
+                    Algorithms.soloveyShtrassen();
                     break;
                 default:
                     break;
